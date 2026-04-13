@@ -1,0 +1,29 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(\"E:/Python Projects/Agent智能助手/.venv/Scripts/python.exe\" -m pip list --format=columns)",
+      "WebSearch",
+      "WebFetch(domain:gofastmcp.com)",
+      "WebFetch(domain:help.aliyun.com)",
+      "WebFetch(domain:www.alibabacloud.com)",
+      "Bash(python -c \"from app.models.state import AgentState; print\\('State OK'\\)\")",
+      "Bash(python -c \"from app.config import settings; print\\('Config OK'\\)\")",
+      "Bash(python -c \"from app.graph.workflow import build_workflow; print\\('Workflow OK'\\)\")",
+      "Bash(python -c \"from app.main import app; print\\('FastAPI OK'\\)\")",
+      "Bash(python -c \"from app.mcp_server import mcp; print\\('MCP OK'\\)\")",
+      "Bash(curl -s -X POST http://localhost:8100/api/v1/chat -H \"Content-Type: application/json\" -d '{\"message\": \"帮我写一个保温杯的文案\", \"session_id\": \"test-001\"}')",
+      "Bash(python -m json.tool)",
+      "Bash(curl:*)",
+      "Bash(kill %1)",
+      "Bash(pkill -f \"uvicorn app.main:app\")",
+      "Bash(python -c \"import inspect; from fastmcp import FastMCP; print\\(inspect.signature\\(FastMCP.call_tool\\)\\)\")",
+      "Bash(python -c ':*)",
+      "Bash(python -c \"from app.graph.workflow import build_workflow; w = build_workflow\\(\\); print\\('Workflow OK'\\)\")",
+      "Bash(pip install:*)",
+      "Bash(pkill -f \"uvicorn app.main\")",
+      "Bash(pkill -f \"streamlit run\")",
+      "Bash(uvicorn app.main:app --host 127.0.0.1 --port 8100)",
+      "Bash(streamlit run:*)"
+    ]
+  }
+}
